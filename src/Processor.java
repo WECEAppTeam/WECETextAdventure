@@ -4,11 +4,19 @@ public class Processor {
 	
 	//This error is written when the command is unknown.
 	private final static String GENERIC_ERROR_MESSAGE = "Command not recognized. Please type \"help\" for legal commands.";
+	public static String playerName = "Name";
 	
 	public static void main(String args[]){
 		//generate a scanner to read from command line
 		Scanner input = new Scanner(System.in);
 
+		//Greet the player and ask for a name
+		System.out.println("Welcome to the WECE Text Adventure!");	
+		System.out.println("===================================");
+		System.out.println("\nTo begin your adventure, enter your character name:");
+		String playerName = input.nextLine();
+		this.playerName = playerName;
+		
 		//make a game
 		GameState gameState = new GameState();
 		while(gameState.isGameOn()){
@@ -43,7 +51,7 @@ public class Processor {
 			}
 			else if (userInput.equalsIgnoreCase("quit")){
 				System.out.println();
-				System.out.println("EXITING. GG.");
+				System.out.println("EXITING. Thanks for playing.");
 				gameState.setGameOn(false);
 				break;
 			}
@@ -52,7 +60,7 @@ public class Processor {
 				System.out.println(gameState.currentLocation.getDescription());
 			}
 			//check if the number of inputs is illegal
-			else if (userInputParts.length != 2) {
+			else if (userInputParts.length > 2) {
 				System.out.println();
 				System.out.println(GENERIC_ERROR_MESSAGE);
 			}

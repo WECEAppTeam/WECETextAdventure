@@ -60,10 +60,7 @@ public class GameState {
 	}
 	
 	private void generateMap() {
-		String[] exits = new String[1];
-		exits[0] = "NORTH";
-		String description = "\n";
-		description += "You see a DOLLAR. A GOBLIN wants to fight.";
-		currentLocation = new Location(exits, description);
+		
 	}
 }
+-

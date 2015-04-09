@@ -1,11 +1,13 @@
 
 public class Location {
 	
-	String[] exits;
 	String description;
+	Location northLocation;
+	Location southLocation;
+	Location eastLocation;
+	Location westLocation;
 	
-	public Location(String[] exits, String description) {
-		this.exits = exits;
+	public Location(String description) {
 		this.description = description;
 	}
 	
@@ -19,15 +21,36 @@ public class Location {
 
 	//builds a string to return what exits are available
 	public String getExits() {
-		String s = "";
+		String s = "NOT YET CODED";
 		//for each exit
-		for (int i=0; i<exits.length; i++){
-			//append each exit
-			s += exits[i];
-			if (i != exits.length - 1){
-				s += ", ";
-			}
-		}
+		
+		//do stuff
 		return s;
 	}
+
+	Location getNorthLocation(){
+		return northLocation;
+	}
+	Location getSouthLocation(){
+		return southLocation;
+	}
+	Location getEastLocation(){
+		return eastLocation;
+	}
+	Location getWestLocation(){
+		return westLocation;
+	}
+	void setNorthLocation(Location location){
+		this.northLocation = location;
+	}
+	void setSouthLocation(Location location){
+		this.southLocation = location;
+	}
+	void setEastvoid(Location location){
+		this.eastLocation = location;
+	}
+	void setWestLocation(Location location){
+		this.westLocation = location;
+	}
+	
 }
