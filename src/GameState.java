@@ -7,7 +7,7 @@ public class GameState {
 	//constructor. Sets game to ON when created.
 	public GameState() {
 		this.gameOn = true;
-		generateMap();
+		currentLocation = Map.generateMap();
 	}
 
 	
@@ -63,4 +63,3 @@ public class GameState {
 		
 	}
 }
--

@@ -15,7 +15,7 @@ public class Processor {
 		System.out.println("===================================");
 		System.out.println("\nTo begin your adventure, enter your character name:");
 		String playerName = input.nextLine();
-		this.playerName = playerName;
+		playerName = playerName;
 		
 		//make a game
 		GameState gameState = new GameState();

@@ -1,7 +1,5 @@
-import Location.java;
-
 public class Map {
-	static Location generateMap{
+	static Location generateMap(){
 		String description = "\n";
 		description += "A GOBLIN sits upon a rock. He looks ready to fight. He guards a DOLLAR.";
 		Location L1 = new Location(description);
@@ -13,17 +11,10 @@ public class Map {
 		description ="\nYou walk upon a lava encrusted hill.";
 		Location L3 = new Location(description);
 		
+		return L1;
+		
 		//link locations
 		//L1.set
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
